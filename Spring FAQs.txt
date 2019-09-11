@@ -1,0 +1,33 @@
+Loose Coupling: no dependency between classes
+WEbsite for human convention
+Web service: code consumption
+
+spring.xml is in root of project
+it goes to xml file & checks for name /ID, creates an instance 
+What is BeanFactory?
+What is ApplicationContext(its an interafce)? Why not BeanFactory?
+typecasting is needed. can be avoided using Triangle.class as 2nd parameter
+
+what id I comment setter? 
+error:cannot directly assign private property to Traingle
+
+<constructor-arg> usd on commenting setter method instead of <property> tag
+Constructor based injection
+
+how to resolve ambiguity in case of multi-parameter 
+
+ClassPathXMLApplicationContext vs FileSystemXMLApplicaitonContext
+
+autowire="byType"
+autowire="byName"
+autowire bydefault is off
+
+getBean method use ???
+
+
+default-init-method="myInit" default-destroy-method="tearDown"
+
+<bean id="circle" class="com.cg.Circle" autowire="byName" scope="prototype"> 
+
+ BeanPostProcessor for every bean getting initialized
+BeanFactoryPostProcessor 

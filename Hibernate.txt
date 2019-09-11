@@ -1,0 +1,44 @@
+//        String gender=sc.nextLine();
+//        TypedQuery<Employee> query=
+//        		em.createQuery("from Employee where gender=?", Employee.class);
+//        TypedQuery<Employee> query = em.createQuery("from Employee where gender=:gen", Employee.class);
+//        query.setParameter("gen", gender);
+//        
+//        //query.setParameter(1, gender);
+//        List<Employee> employees=query.getResultList();
+//        
+//        for(Employee employee:employees) {
+//        	System.out.println(employee);
+        
+        
+//        Query query=em.createQuery("delete from Employee where id=:eno");
+//        query.setParameter("eno", empId);
+//        em.getTransaction().begin(); 
+//        int result=query.executeUpdate();
+//        System.out.println(result+"rows deleted");
+//        em.getTransaction().commit();
+//        sc.close()
+//          TypedQuery<Employee> query=
+//        		  em.createQuery("from Employee where id=:eno", Employee.class);
+//          query.setParameter("eno", empId);
+//          Employee emp=query.getSingleResult();
+//          System.out.println(emp);
+//        }
+
+
+
+System.out.println("Enter Employee Gender:");
+        String gender=sc.nextLine();
+        System.out.println("Enter Employee Salary:");
+        float salary=sc.nextFloat();
+        System.out.println("Enter Employee Age:");
+        int ageNum=sc.nextInt();
+        Query query=em.createQuery("update Employee set salary=salary+:s,age=age+:a where gender=:g");
+
+        query.setParameter("s", salary);
+        query.setParameter("a", ageNum);
+        query.setParameter("g", gender);
+        em.getTransaction().begin(); 
+     int result=query.executeUpdate();
+      em.getTransaction().commit();
+      System.out.println(result +"row(s) updated");
