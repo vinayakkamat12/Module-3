@@ -1,0 +1,8 @@
+All Spring-BOOT annotations:
+https://www.journaldev.com/16966/spring-annotations
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.0.17.Final</version>
+</dependency>
